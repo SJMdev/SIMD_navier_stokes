@@ -1,0 +1,2 @@
+C:\mallib\soloud_20200207\build\vs2019\x64\Debug\soloud_static.lib
+C:\mallib\soloud_20200207\build\vs2019\x64\Debug\soloud_static.pdb
