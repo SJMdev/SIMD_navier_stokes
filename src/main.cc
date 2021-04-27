@@ -13,6 +13,8 @@
 #include <iostream>
 #include <algorithm>
 #include <immintrin.h>
+#include <cmath> // isnan
+
 
 using namespace std;
 
@@ -20,7 +22,7 @@ using namespace std;
 //--- SIMULATION PARAMETERS ------------------------------------------------------------------------
 const int DIM = 52;				//size of simulation grid
 const double dt = 0.2;				//simulation time step
-float visc = 0.001;				//fluid viscosity
+float visc = 0.001f;				//fluid viscosity
 double *vx, *vy;             //(vx,vy)   = velocity field at the current moment
 double *vx0, *vy0;           //(vx0,vy0) = velocity field at the previous moment
 double *fx, *fy;	            //(fx,fy)   = user-controlled simulation forces, steered with the mouse
@@ -51,6 +53,30 @@ int clamp(float x)
 { return ( (x) >= 0.0? ((int)(x)) : (-((int)(1-(x) ) ) ) ); }
 
 
+
+inline __m128i SIMD_clamp(__m256d lhs)
+{
+	// we get a set of values
+	// if they are greater than 0.0, we need to do something.
+	// step from double down to float:
+	__m128 lhs_float = _mm256_cvtpd_ps(lhs);
+
+	float vec_zeroes_f[4] = {0.0f,0.0f,0.0f,0.0f};
+	float vec_ones_f[4] = {0.0f,0.0f,0.0f,0.0f};
+	float vec_neg_ones_f[4] = {-1.0f,-1.0f,-1.0f,-1.0f};
+
+	__m128 negative_mask = _mm_cmplt_ps(lhs_float, *(__m128*)vec_zeroes_f);	
+ 	__m128 negative_ones = _mm_and_ps(*(__m128*)vec_neg_ones_f, negative_mask);
+
+	// the mask will contain -1 for the negative value.
+	// -1 * (1 - x) = -1 + x
+	lhs_float = _mm_add_ps(lhs_float, negative_ones);
+
+	__m128i int_clamped = _mm_cvttps_epi32(lhs_float);
+
+	return int_clamped;
+}
+
 //------ SIMULATION CODE STARTS HERE -----------------------------------------------------------------
 
 //init_simulation: Initialize simulation data structures as a function of the grid size 'n'.
@@ -62,10 +88,22 @@ void init_simulation(int n)
 	std::cout << "n: " << n << '\n';
 	assert(n % 4 == 0);
 
+	double SIMD_clamp_test[4] = {-102.5f, 100.0f, 1.0f, -1.0f};
+	int SIMD_clamp_result[4];
+
+	*(__m128i*)SIMD_clamp_result = SIMD_clamp(*(__m256d*)SIMD_clamp_test);
+	for (size_t idx = 0; idx != 4; ++idx)
+	{
+		std::cerr << "original value, clamped, value,  SIMD clamped value: "  << SIMD_clamp_test[idx] << " , " << clamp(SIMD_clamp_test[idx]) << " , " << SIMD_clamp_result[idx] << '\n'; 
+	} 
+
 	double clamp_test = 100.0f;
 	int result = clamp(clamp_test);
-	double clamp_neg_test = -100.0f;
+	// double clamp_neg_test = -100.0f;
+	double clamp_neg_test = -102.5f;
+
 	int neg_result = clamp(clamp_neg_test);
+	std::cout << "clamp pos: " << result << ", clamp neg: " << neg_result << '\n';
 	std::cout << "clamp pos: " << result << ", clamp neg: " << neg_result << '\n';
 
 	dim     = n * 2*(n/2+1)*sizeof(double);        //Allocate data structures
@@ -108,7 +146,6 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 	int  i0, j0, i1, j1;
 
 	double vec_dt[4] = {dt,dt,dt,dt};
-	double vec_zeros[4] = {0.0,0.0,0.0,0.0};	
 	const size_t buffer_byte_count = n * 2*(n/2+1)*sizeof(double);   
 	constexpr size_t simd_byte_count = 4 * sizeof(double);
 	
@@ -121,16 +158,6 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 		// vy[idx] += dt*vy0[idx];
 		// vy0[idx] = vy[idx];
 
-
-
-		// we DON'T! actually require intermediate?
-		// __m256d vx_idx = _mm256_fmadd_pd( *(__m256d*)&vx0[idx], *(__m256d*)vec_dt, *(__m256d*)&vx[idx]);
-		// __m256d vy_idx = _mm256_fmadd_pd( *(__m256d*)&vy0[idx], *(__m256d*)vec_dt, *(__m256d*)&vy[idx]);
-		// _mm256_storeu_pd (&vx[idx], vx_idx);
-		// _mm256_storeu_pd (&vy[idx], vy_idx);
-		// _mm256_storeu_pd (&vx0[idx], *(__m256d*)&vx[idx]);
-		// _mm256_storeu_pd (&vy0[idx], *(__m256d*)&vy[idx]);
-
 		// vx = vx0 * dt + vx;
 		*(__m256d*)&vx[idx] = _mm256_fmadd_pd( *(__m256d*)&vx0[idx], *(__m256d*)vec_dt, *(__m256d*)&vx[idx]);
 		*(__m256d*)&vy[idx] = _mm256_fmadd_pd( *(__m256d*)&vy0[idx], *(__m256d*)vec_dt, *(__m256d*)&vy[idx]);
@@ -141,21 +168,30 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 	memcpy((void*)(&vy0[0]),(void*)(&vy[0]), n * n * sizeof(double));
 
 
+
+	// setup for second part.
 	constexpr double start_value = 0.5f / DIM;
 	double x = start_value;
 	double y = start_value;
-	double vec_x[4] = {start_value, start_value,start_value, start_value};	
-	double vec_y[4] = {start_value, start_value,start_value, start_value};
-
-
 	constexpr double increment = 1.0f / DIM;
+
+	double vec_x[4] = {start_value, start_value, start_value, start_value};	
+	const double vec_x_increment[4] = {increment, increment, increment, increment};
+	double vec_y[4] = {start_value, start_value + increment, start_value + 2 * increment, start_value + 3.0 * increment};
+	const double vec_y_increment[4] = {4.0 * increment, 4.0 * increment, 4.0 * increment, 4.0 * increment};
+
 	const double vec_neg_dt[4] = {-dt, -dt, -dt, -dt};
 	const double vec_n[4] = {DIM, DIM, DIM, DIM};
-	const double vec_minus_half[4] = {-0.5f,-0.5f,-0.5f,-0.5f};
-	const double vec_increment[4] = {increment, increment, increment, increment};
-	const uint64_t vec_ui_zeroes[4] = {0,0,0,0};
-	const uint64_t vec_ui_ones[4] = {1,1,1,1};
+	const int vec_i_n[4] = {DIM,DIM,DIM,DIM};
 
+	const double vec_minus_half[4] = {-0.5f,-0.5f,-0.5f,-0.5f};
+	
+
+	const int32_t vec_i_zeroes[4] = {0,0,0,0};
+	const int32_t vec_i_ones[4] = {1,1,1,1};
+	const double vec_min_ones[4] = {-1.0,-1.0,-1.0,-1.0};
+	const double vec_ones[4] = {1.0,1.0,1.0,1.0};
+	const double vec_zeros[4] = {0.0,0.0,0.0,0.0};
 
 	for (int i = 0; i < n ; ++i)
 	{
@@ -164,9 +200,10 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 			int cell_idx = i + n * j;
 			x0 = n * (x - dt * vx0[cell_idx]) -0.5f;
 			y0 = n * (y - dt * vy0[cell_idx]) -0.5f;
-			// {
 
-				// intermeditate = -dt * v + a)
+			// {
+				// we require an intermediate value since we cannot store everything at once
+				//   intermediate = -dt * v + a)
 				__m256d intermediate =  _mm256_fmadd_pd( *(__m256d*)&vx0[cell_idx], *(__m256d*)vec_neg_dt, *(__m256d*)&vec_x);
 				// // n * intermediate - 0.5f)
 				__m256d vec_x0 = _mm256_fmadd_pd(intermediate, *(__m256d*)vec_n, *(__m256d*)&vec_minus_half);
@@ -175,32 +212,110 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 				intermediate = _mm256_fmadd_pd( *(__m256d*)&vy0[cell_idx], *(__m256d*)vec_neg_dt, *(__m256d*)&vec_y);
 				// // n * intermediate - 0.5f)
 				__m256d vec_y0 = _mm256_fmadd_pd(intermediate, *(__m256d*)vec_n, *(__m256d*)&vec_minus_half);
-
-
 			// } 
-			      	
-			// convert to int and clamp.
-	      	i0 = clamp(x0); // double to int?
-	      	s = x0 - i0;
-    	  	i0 = (n + (i0 % n)) % n;
-	      	i1 = (i0 + 1) % n;
 
+			// // convert to int and clamp.
+			i0 = clamp(x0); // double to int?
+			s = x0 - i0;
+			i0 = (n + (i0 % n)) % n;
+			i1 = (i0 + 1) % n;
 			
 			// {
 			// clamp
-				__m256i vec_i0 =  _mm256_cvtpd_epu64(vec_x0);
-				__mmask8 negative_mask = _mm256_cmplt_epu64_mask(vec_x0,  *(__m256d*)vec_ui_zeroes); // if numbers are negative, make it true.
-				vec_i0 = _mm256_mask_sub_epi64(vec_i0, negative_mask, vec_i0,*(__m256d*)vec_ui_ones);
+			
 
-				__m256i vec_s = __m256_sub_epi64(vec_x0, vec_i0);
-				vec_i0 =  _mm256_rem_epi64 (vec_i0, vec_n);
-				vec_i0 =  _mm256_add_epi64(vec_i0, vec_n);
-				vec_i0 =  _mm256_rem_epi64 (vec_i0, vec_n);
+				// double result_x0[4];
+				// double result_y0[4];
+
+				// _mm256_storeu_pd(result_x0, vec_x0);
+				// _mm256_storeu_pd(result_y0, vec_y0);
+
+
+				// ok, step down to 128 bit (since we don't have the full AVX2 instruction set)
 				
-				__mm256 vec_i1 =_mm256_add_epi64(vec_i0, vec_ui_ones);
-				vec_i1 = _mm256_rem_epi64(veC_i1, vec_n);
+
+
+
+				// std::cerr << "new cycle\n";
+				// for(size_t idx = 0; idx != 4; ++idx)
+				// {
+				// 	if (idx == 0)
+				// 	{
+				// 		// std::cerr << "x0, y0:"  << x0 << " , " << y0 << '\n';
+				// 	}
+				// 	// std::cerr <<"vec_x0, vec_y0: " <<  result_x0[idx] << " , " << result_y0[idx]  << '\n';
+				// 	if (idx == 0)
+				// 	{
+
+				// 		// if (x0 != result_x0[idx] || y0 != result_y0[idx])
+				// 		// {
+				// 		// 	std::cerr << "result_x, x: " << vec_x[0] << " " << x << '\n';
+				// 		// 	std::cerr << "result_y, y: " << vec_y[0] << " " << y << '\n'; 
+				// 		// }
+				// 		// assert(x0 == result_x0[idx]);
+				// 		// assert(y0 == result_y0[idx]);
+
+				// 	}
+					
+				// 	// if (isnan(result_x0[idx]))
+				// 	// {
+				// 	// 	std::cerr << "NAN:" << '\n';
+
+				// 	// 	std::cerr << "vx0 values: " << vx0[cell_idx] << " , " << vx0[cell_idx + 1]  << " , " << vx0[cell_idx + 2] << " , " << vx0[cell_idx + 3] << '\n';  
+				// 	// 	std::cerr << "vy0 values: " << vy0[cell_idx] << " , " << vy0[cell_idx + 1]  << " , " << vy0[cell_idx + 2] << " , " << vy0[cell_idx + 3] << '\n'; 
+
+				// 	// 	std::cerr << "x0 values: " << x0 << '\n';   
+				// 	// 	std::cerr << "y0 values: " << y0 << '\n';
+
+
+				// 	// 	exit(1);
+				// 	// }
+				// }
+
+				// CLAMP
+				__m128i vec_i0 = SIMD_clamp(vec_x0);
+
+				// int result_int[4];
+				// _mm_storeu_epi32(result_int, vec_i0);
+
+				// if (result_int[0] != clamp(x0))
+				// {
+				// 	std::cerr << "result x0, actual x0: "  << result_x0[0] << "  , " << x0 << '\n';
+				// 	std::cerr << "result clamp, actual clamp: " << result_int[0] << " , " << clamp(x0) << '\n';
+				// 	assert(result_int[0] == clamp(x0));
+				// }
+
+				__m128  vec_i0_float = _mm_cvtepi32_ps(vec_i0);
+				__m256d vec_i0_double = _mm256_cvtps_pd(vec_i0_float);
+				__m256d vec_s = _mm256_sub_pd(vec_x0, vec_i0_double);
+
+				vec_i0 =  _mm_rem_epi32(vec_i0, *(__m128i*)vec_i_n);
+				vec_i0 =  _mm_add_epi32(vec_i0, *(__m128i*)vec_i_n);
+				vec_i0 =  _mm_rem_epi32(vec_i0, *(__m128i*)vec_i_n);
+				
+				__m128i vec_i1 =_mm_add_epi32(vec_i0, *(__m128i*)vec_i_ones);
+				vec_i1 = _mm_rem_epi32(vec_i1, *(__m128i*)vec_i_n);
 			// }
 
+
+			//{
+				
+				// ok, step down to 128 bit (since we don't have the full AVX512 instruction set)
+				__m128i vec_j0 = SIMD_clamp(vec_y0);
+
+				__m128  vec_j0_float = _mm_cvtepi32_ps(vec_j0);
+				 __m256d vec_j0_double = _mm256_cvtps_pd(vec_j0_float);
+
+				__m256d vec_t = _mm256_sub_pd(vec_y0, vec_j0_double);
+
+				vec_j0 =  _mm_rem_epi32(vec_j0, *(__m128i*)vec_i_n);
+				vec_j0 =  _mm_add_epi32(vec_j0, *(__m128i*)vec_i_n);
+				vec_j0 =  _mm_rem_epi32(vec_j0, *(__m128i*)vec_i_n);
+				
+				__m128i vec_j1 =_mm_add_epi32(vec_j0, *(__m128i*)vec_i_ones);
+				vec_j1 = _mm_rem_epi32(vec_j1, *(__m128i*)vec_i_n);
+
+			// }
 
 
 	      	j0 = clamp(y0);
@@ -210,26 +325,29 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 
 
 
-			// clamp
-			// {
-	      		// clamp
-				__m256i vec_j0 =  _mm256_cvtpd_epu64(vec_y0);
-				__mmask8 negative_mask = _mm256_cmplt_epu64_mask(
-					vec_y0,
-					*(__m256d*)vec_ui_zeroes); // if numbers are negative, make it true.
-				vec_j0 = _mm256_mask_sub_epi64(vec_j0, negative_mask, vec_j0,*(__m256d*)vec_ui_ones);
-				
-				__m256i vec_t = __m256_sub_epi64(vec_y0, vec_j0);
-				
+				// int result_vec_i0[4];
+				// int result_vec_i1[4];
+				// _mm_storeu_epi32(result_vec_i0, vec_i0);
+				// _mm_storeu_epi32(result_vec_i1, vec_i1);
 
-		     	vec_j0 =  _mm256_rem_epi64 (vec_j0, vec_n);
-				vec_j0 =  _mm256_add_epi64(vec_j0, vec_n);
-				vec_j0 =  _mm256_rem_epi64 (vec_j0, vec_n);
-				
-				__mm256i vec_j1 =_mm256_add_epi64(vec_j0, vec_ui_ones);
-				vec_j1 = _mm256_rem_epi64(vec_j1, vec_n);
+				// int result_vec_j0[4];
+				// int result_vec_j1[4];
+				// _mm_storeu_epi32(result_vec_j0, vec_j0);
+				// _mm_storeu_epi32(result_vec_j1, vec_j1);
 
-			// }
+				// for(size_t idx = 0; idx != 4; ++idx)
+				// {
+				// 	if (idx == 0)
+				// 	{
+				// 		// std::cerr << "i0, i1: " << i0 << " , " << i1 << '\n';
+				// 		// std::cerr << "j0, j1: " << j0 << " , " << j1 << '\n';
+				// 	}
+
+				// 	// std::cerr <<"vec_i0, vec_i1: " <<  result_vec_i0[idx] << " , " << result_vec_i1[idx]  << '\n';
+				// 	// std::cerr <<"vec_j0, vec_j1: " <<  result_vec_j0[idx] << " , " << result_vec_j1[idx]  << '\n';
+
+				// }
+
 
 	      	int lower_clamp_idx = i0 + n * j0;
 	      	int col_clamp_idx = i0 + n * j1;
@@ -237,49 +355,219 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 	      	int upper_clamp_idx = i1 + n * j1;
 
 	      	// {
-	      	__m256i vec_lower_clamp_idx = _mm256_mullo_epi64(vec_n, vec_j0);
-	      	__m256i vec_col_clamp_idx =  _mm256_mullo_epi64(vec_n, vec_j1);		
-	      	__m256i vec_row_clamp_idx =   _mm256_mullo_epi64(vec_n,vec_j0);		
-	      	__m256i vec_upper_clamp_idx  = _mm256_mullo_epi64(vec_n,vec_j1);	
-		
-			vec_lower_clamp_idx = _mm256_add_epi64(vec_i0, vec_lower_clamp_idx);
-			vec_col_clamp_idx =  _mm256_add_epi64(vec_i0, vec_col_clamp_idx);	
-			vec_row_clamp_idx =   _mm256_add_epi64(vec_i1,vec_row_clamp_idx);	
-			vec_upper_clamp_idx  = _mm256_add_epi64(vec_i1,vec_upper_clamp_idx);
+				__m128i vec_lower_clamp_idx  = _mm_mullo_epi32(*(__m128i*)vec_i_n, vec_j0);
+				__m128i vec_col_clamp_idx    = _mm_mullo_epi32(*(__m128i*)vec_i_n, vec_j1);		
+				__m128i vec_row_clamp_idx    = _mm_mullo_epi32(*(__m128i*)vec_i_n, vec_j0);		
+				__m128i vec_upper_clamp_idx  = _mm_mullo_epi32(*(__m128i*)vec_i_n, vec_j1);	
+			
+				vec_lower_clamp_idx  = _mm_add_epi32(vec_i0, vec_lower_clamp_idx);
+				vec_col_clamp_idx    = _mm_add_epi32(vec_i0, vec_col_clamp_idx);	
+				vec_row_clamp_idx    = _mm_add_epi32(vec_i1, vec_row_clamp_idx);	
+				vec_upper_clamp_idx  = _mm_add_epi32(vec_i1, vec_upper_clamp_idx);
+
+				// int result_lower_clamp[4];
+				// int result_col_clamp[4];
+				// int result_row_clamp[4];
+				// int result_upper_clamp[4];
+
+				// _mm_storeu_epi32(result_lower_clamp, vec_lower_clamp_idx);
+				// _mm_storeu_epi32(result_col_clamp, vec_col_clamp_idx);
+				// _mm_storeu_epi32(result_row_clamp, vec_row_clamp_idx);
+				// _mm_storeu_epi32(result_upper_clamp, vec_upper_clamp_idx);
+
+				// for(size_t idx = 0; idx != 4; ++idx)
+				// {
+				// 	if (idx == 0)
+				// 	{
+				// 		std::cerr << "lower_clamp_idx: " << lower_clamp_idx << '\n';
+
+				// 		std::cerr << "col_clamp_idx: " << col_clamp_idx << '\n';
+
+				// 		std::cerr << "row_clamp_idx: " << row_clamp_idx<< '\n';
+
+				// 		std::cerr << "upper_clamp_idx: " << upper_clamp_idx << '\n';
+
+				// 	}
+
+				// 		std::cerr << "vec_lower_clamp_idx: " << result_lower_clamp[idx] << '\n';
+
+				// 		std::cerr << "vec_col_clamp_idx: " << result_col_clamp[idx] << '\n';
+
+				// 		std::cerr << "vec_row_clamp_idx: " << result_row_clamp[idx] << '\n';
+
+				// 		std::cerr << "vec_upper_clamp_idx: " << result_upper_clamp[idx] << '\n';
+
+				// 		if (idx == 0)
+				// 		{
+				// 				std::cerr << "i, j:" <<  i << j << '\n';
+				// 				assert(lower_clamp_idx ==  result_lower_clamp[0]);
+				// 				assert(col_clamp_idx ==  result_col_clamp[0]);
+				// 				assert(row_clamp_idx ==  result_row_clamp[0]);
+				// 				assert(upper_clamp_idx ==  result_upper_clamp[0]);
+				// 		}
+				// }
+
+				// gather all the necessary vx0 / vy0 values.
+				__m256d vx0_lower_clamp  = _mm256_i32gather_pd (vx0, vec_lower_clamp_idx, 8);
+				__m256d vx0_col_clamp    = _mm256_i32gather_pd (vx0, vec_col_clamp_idx, 8);
+				__m256d vx0_row_clamp    = _mm256_i32gather_pd (vx0, vec_row_clamp_idx, 8);
+				__m256d vx0_upper_clamp  = _mm256_i32gather_pd (vx0, vec_upper_clamp_idx, 8);
+
+				__m256d vy0_lower_clamp  = _mm256_i32gather_pd (vy0, vec_lower_clamp_idx, 8);
+				__m256d vy0_col_clamp    = _mm256_i32gather_pd (vy0, vec_col_clamp_idx, 8);
+				__m256d vy0_row_clamp    = _mm256_i32gather_pd (vy0, vec_row_clamp_idx, 8);
+				__m256d vy0_upper_clamp  = _mm256_i32gather_pd (vy0, vec_upper_clamp_idx, 8);
+			// }
 
 
+				// double result_vx0_lower_clamp[4];
+				// double result_vx0_col_clamp[4];
+				// double result_vx0_row_clamp[4];
+				// double result_vx0_upper_clamp[4];
 
-	       // }
+				// double result_vy0_lower_clamp[4];
+				// double result_vy0_col_clamp[4];
+				// double result_vy0_row_clamp[4];
+				// double result_vy0_upper_clamp[4];
 
-	      	vx[cell_idx] = (1 - s) * ((1 - t) * vx0[lower_clamp_idx] +
-	      				    t * vx0[col_clamp_idx]) + 
-	      					s * ((1 - t) * vx0[row_clamp_idx] + 
-      						t * vx0[upper_clamp_idx]);
 
-	      	vy[cell_idx] = (1 - s) * ((1 - t) * vy0[lower_clamp_idx] + 
-	      					t * vy0[col_clamp_idx]) + 
-	      					s * ((1 - t) * vy0[row_clamp_idx] + 
-      						t * vy0[upper_clamp_idx]);
-		     
+				// _mm256_storeu_pd(result_vx0_lower_clamp, vx0_lower_clamp);
+				// _mm256_storeu_pd(result_vx0_col_clamp, vx0_col_clamp);
+				// _mm256_storeu_pd(result_vx0_row_clamp, vx0_row_clamp);
+				// _mm256_storeu_pd(result_vx0_upper_clamp, vx0_upper_clamp);
+
+
+				// _mm256_storeu_pd(result_vy0_lower_clamp, vy0_lower_clamp);
+				// _mm256_storeu_pd(result_vy0_col_clamp, vy0_col_clamp);
+				// _mm256_storeu_pd(result_vy0_row_clamp, vy0_row_clamp);
+				// _mm256_storeu_pd(result_vy0_upper_clamp, vy0_upper_clamp);
+
+
+				// for(size_t idx = 0; idx != 4; ++idx)
+				// {
+				// 		if (idx == 0)
+				// 		{
+
+				// 				std::cerr << "result, actual: " << result_vy0_lower_clamp[idx] << " , " <<  vy0[lower_clamp_idx] << '\n';
+				// 				std::cerr << "result, actual: " << result_vx0_lower_clamp[idx] << " , " <<  vx0[lower_clamp_idx] << '\n';
+
+				// 				std::cerr << "result, actual: " << result_vy0_col_clamp[idx] << " , " <<  vy0[col_clamp_idx] << '\n';
+				// 				std::cerr << "result, actual: " << result_vx0_col_clamp[idx] << " , " <<  vx0[col_clamp_idx] << '\n';
+
+				// 				std::cerr << "result, actual: " << result_vy0_row_clamp[idx] << " , " <<  vy0[row_clamp_idx] << '\n';
+				// 				std::cerr << "result, actual: " << result_vx0_row_clamp[idx] << " , " <<  vx0[row_clamp_idx] << '\n';
+
+				// 				std::cerr << "result, actual: " << result_vy0_upper_clamp[idx] << " , " <<  vy0[upper_clamp_idx] << '\n';
+				// 				std::cerr << "result, actual: " << result_vx0_upper_clamp[idx] << " , " <<  vx0[upper_clamp_idx] << '\n';
+
+
+				// 				assert(result_vy0_lower_clamp[idx] ==  vy0[lower_clamp_idx]);
+				// 				assert(result_vx0_lower_clamp[idx] ==  vx0[lower_clamp_idx]);
+
+				// 				assert(result_vy0_col_clamp[idx] ==  vy0[col_clamp_idx]);
+				// 				assert(result_vx0_col_clamp[idx] ==  vx0[col_clamp_idx]);
+
+				// 				assert(result_vy0_row_clamp[idx] ==  vy0[row_clamp_idx]);
+				// 				assert(result_vx0_row_clamp[idx] ==  vx0[row_clamp_idx]);
+
+				// 				assert(result_vy0_upper_clamp[idx] ==  vy0[upper_clamp_idx]);
+				// 				assert(result_vx0_upper_clamp[idx] ==  vx0[upper_clamp_idx]);
+				// 		}
+				// }
+     
+
+
+       // 	vx[cell_idx] = (1 - s) * ((1 - t) * vx0[lower_clamp_idx] +
+	      // 				    t * vx0[col_clamp_idx]) + 
+	      // 					s * ((1 - t) * vx0[row_clamp_idx] + 
+      	// 					t * vx0[upper_clamp_idx]);
+
+      	// vy[cell_idx] = (1 - s) * ((1 - t) * vy0[lower_clamp_idx] + 
+	      // 					t * vy0[col_clamp_idx]) + 
+	      // 					s * ((1 - t) * vy0[row_clamp_idx] + 
+      	// 					t * vy0[upper_clamp_idx]);
+
+			// one minus s
+			__m256d one_minus_s = _mm256_sub_pd(*(__m256d*)vec_ones, vec_s);    
+	      // one minus t 
+	      __m256d one_minus_t = _mm256_sub_pd(*(__m256d*)vec_ones, vec_t);
+
+	      /// VX
+	      // (1 - t) * vx0[lower_clamp_idx]
+	      __m256d accumulator = _mm256_mul_pd(one_minus_t, vx0_lower_clamp);
+
+			// t * vx0[col_clamp_idx] + (accumulator  -> (1 - t) * vx0[lower_clamp_idx])
+	      accumulator = _mm256_fmadd_pd(vec_t, vx0_col_clamp, accumulator);
+
+	      // (1 - s) * ((1 - t) * vx0[lower_clamp_idx] +
+	      // 				    t * vx0[col_clamp_idx])
+	      accumulator = _mm256_mul_pd(one_minus_s, accumulator);
+
+			//(1 - t) * vx0[row_clamp_idx]
+	      __m256d second_accumulator = _mm256_mul_pd(one_minus_t, vx0_row_clamp);
+
+	      //(1 - t) * vx0[row_clamp_idx] + 
+      	// 					t * vx0[upper_clamp_idx]
+	      second_accumulator = _mm256_fmadd_pd(vec_t, vx0_upper_clamp, second_accumulator);
+
+
+	      second_accumulator = _mm256_mul_pd(vec_s, second_accumulator);
+
+	      *(__m256d*)&vx[cell_idx] = _mm256_add_pd(accumulator, second_accumulator);
+
+
+	      /// VY
+			// (1 - t) * vy0[lower_clamp_idx]
+	      accumulator = _mm256_mul_pd(one_minus_t, vy0_lower_clamp);
+
+			// t * vy0[col_clamp_idx] + (accumulator  -> (1 - t) * vy0[lower_clamp_idx])
+	      accumulator = _mm256_fmadd_pd(vec_t, vy0_col_clamp, accumulator);
+
+	      // (1 - s) * ((1 - t) * vy0[lower_clamp_idx] +
+	      // 				    t * vy0[col_clamp_idx])
+	      accumulator = _mm256_mul_pd(one_minus_s, accumulator);
+
+			//(1 - t) * vy0[row_clamp_idx]
+	      second_accumulator = _mm256_mul_pd(one_minus_t, vy0_row_clamp);
+
+	      // t * vy0[upper_clamp_idx]
+	      second_accumulator = _mm256_fmadd_pd(vec_t, vy0_upper_clamp, second_accumulator);
+
+	      second_accumulator = _mm256_mul_pd(vec_s, second_accumulator);
+
+	      *(__m256d*)&vy[cell_idx] = _mm256_add_pd(accumulator, second_accumulator);
+
+	      // std::cerr << "result vx, actual vx: "  << vx[cell_idx] << " , " << vx_cell_idx << '\n';
+	      // std::cerr << "result vy, actual vy: "  << vy[cell_idx] << " , " <<  vy_cell_idx << '\n';
+
+
+	     // assert(vy[cell_idx] == vy_cell_idx);
+	     // assert(vx[cell_idx] == vx_cell_idx);
+
+
 		    y += increment; 
+		    *(__m256d*)vec_y = _mm256_add_pd(*(__m256d*)vec_y, *(__m256d*)vec_y_increment);
 		   }
 
 	   x += increment;
+
+	   //@FIXME: does this make logical sense?
+	   *(__m256d*)vec_x = _mm256_add_pd(*(__m256d*)vec_x, *(__m256d*)vec_x_increment);
+	   // x += increment;
 	}
 	  
 	int accumulator = 0;
+
 	// ?? what term is this?
 	for(int row_idx = 0; row_idx < n; ++row_idx)
 	{
 		for(int col_idx =0; col_idx < n; ++col_idx)
 	 	{ 
-	 		//
  			vx0[row_idx + (n + 2) * col_idx] = vx[row_idx  + n * col_idx]; 
  			vy0[row_idx + (n + 2) * col_idx] = vy[row_idx  + n * col_idx];
  		}
 	}
 
-	// assert(accumulator == 49 * 49);
 	  
     fftw_execute(plan_r2c_vx0);
     fftw_execute(plan_r2c_vy0);

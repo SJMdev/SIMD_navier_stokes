@@ -45,7 +45,7 @@ build uninstall: phony CMakeFiles\uninstall
 # Utility command for install/local
 
 build CMakeFiles\install\local.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build install\local: phony CMakeFiles\install\local.util
 # Utility command for install
 
 build CMakeFiles\install.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -69,7 +69,7 @@ build install: phony CMakeFiles\install.util
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -80,7 +80,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\mallib\mallib\fps\subprojects\glfw-3.3.2 -B"C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2 -B"C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -98,11 +98,11 @@ build list_install_components: phony
 # Custom command for CMakeFiles\uninstall
 
 build CMakeFiles\uninstall: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/cmake_uninstall.cmake""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/cmake_uninstall.cmake""
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/mallib/mallib/fps/subprojects/glfw-3.3.2/CMakeLists.txt
+# C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/CMakeLists.txt
 # =============================================================================
 
 
@@ -110,7 +110,7 @@ build CMakeFiles\uninstall: CUSTOM_COMMAND
 # Utility command for rebuild_cache
 
 build src\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\mallib\mallib\fps\subprojects\glfw-3.3.2 -B"C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2 -B"C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -284,7 +284,7 @@ build src\glfw3.lib: C_STATIC_LIBRARY_LINKER__glfw_Debug src\CMakeFiles\glfw.dir
 # Utility command for install/local
 
 build src\CMakeFiles\install\local.util: CUSTOM_COMMAND src\all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -296,7 +296,7 @@ build src\install\local: phony src\CMakeFiles\install\local.util
 # Utility command for install
 
 build src\CMakeFiles\install.util: CUSTOM_COMMAND src\all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -308,7 +308,7 @@ build src\install: phony src\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build src\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\src" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -322,7 +322,7 @@ build src\list_install_components: phony
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/mallib/mallib/fps/subprojects/glfw-3.3.2/CMakeLists.txt
+# C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -343,11 +343,11 @@ build examples\CMakeFiles\boing.dir\boing.c.obj: C_COMPILER__boing_Debug ..\..\.
   TARGET_COMPILE_PDB = examples\CMakeFiles\boing.dir\
   TARGET_PDB = examples\boing.pdb
 
-build examples\CMakeFiles\boing.dir\glfw.rc.res: RC_COMPILER__boing_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_boing
+build examples\CMakeFiles\boing.dir\glfw.rc.res: RC_COMPILER__boing_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_boing
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\boing.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\boing.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\boing.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\boing.dir\
@@ -375,7 +375,7 @@ build examples\boing.exe: C_EXECUTABLE_LINKER__boing_Debug examples\CMakeFiles\b
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\boing.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/boing.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\boing.dir\
   TARGET_FILE = examples\boing.exe
@@ -400,11 +400,11 @@ build examples\CMakeFiles\simple.dir\simple.c.obj: C_COMPILER__simple_Debug ..\.
   TARGET_COMPILE_PDB = examples\CMakeFiles\simple.dir\
   TARGET_PDB = examples\simple.pdb
 
-build examples\CMakeFiles\simple.dir\glfw.rc.res: RC_COMPILER__simple_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_simple
+build examples\CMakeFiles\simple.dir\glfw.rc.res: RC_COMPILER__simple_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_simple
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\simple.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\simple.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\simple.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\simple.dir\
@@ -432,7 +432,7 @@ build examples\simple.exe: C_EXECUTABLE_LINKER__simple_Debug examples\CMakeFiles
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\simple.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/simple.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\simple.dir\
   TARGET_FILE = examples\simple.exe
@@ -457,11 +457,11 @@ build examples\CMakeFiles\gears.dir\gears.c.obj: C_COMPILER__gears_Debug ..\..\.
   TARGET_COMPILE_PDB = examples\CMakeFiles\gears.dir\
   TARGET_PDB = examples\gears.pdb
 
-build examples\CMakeFiles\gears.dir\glfw.rc.res: RC_COMPILER__gears_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_gears
+build examples\CMakeFiles\gears.dir\glfw.rc.res: RC_COMPILER__gears_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_gears
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\gears.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\gears.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\gears.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\gears.dir\
@@ -489,7 +489,7 @@ build examples\gears.exe: C_EXECUTABLE_LINKER__gears_Debug examples\CMakeFiles\g
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\gears.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/gears.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\gears.dir\
   TARGET_FILE = examples\gears.exe
@@ -514,11 +514,11 @@ build examples\CMakeFiles\wave.dir\wave.c.obj: C_COMPILER__wave_Debug ..\..\..\e
   TARGET_COMPILE_PDB = examples\CMakeFiles\wave.dir\
   TARGET_PDB = examples\wave.pdb
 
-build examples\CMakeFiles\wave.dir\glfw.rc.res: RC_COMPILER__wave_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_wave
+build examples\CMakeFiles\wave.dir\glfw.rc.res: RC_COMPILER__wave_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_wave
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\wave.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\wave.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\wave.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\wave.dir\
@@ -546,7 +546,7 @@ build examples\wave.exe: C_EXECUTABLE_LINKER__wave_Debug examples\CMakeFiles\wav
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\wave.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/wave.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\wave.dir\
   TARGET_FILE = examples\wave.exe
@@ -571,11 +571,11 @@ build examples\CMakeFiles\particles.dir\particles.c.obj: C_COMPILER__particles_D
   TARGET_COMPILE_PDB = examples\CMakeFiles\particles.dir\
   TARGET_PDB = examples\particles.pdb
 
-build examples\CMakeFiles\particles.dir\glfw.rc.res: RC_COMPILER__particles_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_particles
+build examples\CMakeFiles\particles.dir\glfw.rc.res: RC_COMPILER__particles_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_particles
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\particles.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\particles.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\particles.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\particles.dir\
@@ -621,7 +621,7 @@ build examples\particles.exe: C_EXECUTABLE_LINKER__particles_Debug examples\CMak
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\particles.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/particles.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\particles.dir\
   TARGET_FILE = examples\particles.exe
@@ -646,11 +646,11 @@ build examples\CMakeFiles\heightmap.dir\heightmap.c.obj: C_COMPILER__heightmap_D
   TARGET_COMPILE_PDB = examples\CMakeFiles\heightmap.dir\
   TARGET_PDB = examples\heightmap.pdb
 
-build examples\CMakeFiles\heightmap.dir\glfw.rc.res: RC_COMPILER__heightmap_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_heightmap
+build examples\CMakeFiles\heightmap.dir\glfw.rc.res: RC_COMPILER__heightmap_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_heightmap
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\heightmap.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\heightmap.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\heightmap.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\heightmap.dir\
@@ -678,7 +678,7 @@ build examples\heightmap.exe: C_EXECUTABLE_LINKER__heightmap_Debug examples\CMak
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\heightmap.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/heightmap.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\heightmap.dir\
   TARGET_FILE = examples\heightmap.exe
@@ -709,11 +709,11 @@ build examples\CMakeFiles\splitview.dir\splitview.c.obj: C_COMPILER__splitview_D
   TARGET_COMPILE_PDB = examples\CMakeFiles\splitview.dir\
   TARGET_PDB = examples\splitview.pdb
 
-build examples\CMakeFiles\splitview.dir\glfw.rc.res: RC_COMPILER__splitview_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_splitview
+build examples\CMakeFiles\splitview.dir\glfw.rc.res: RC_COMPILER__splitview_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_splitview
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\splitview.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\splitview.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\splitview.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\splitview.dir\
@@ -741,7 +741,7 @@ build examples\splitview.exe: C_EXECUTABLE_LINKER__splitview_Debug examples\CMak
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\splitview.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/splitview.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\splitview.dir\
   TARGET_FILE = examples\splitview.exe
@@ -766,11 +766,11 @@ build examples\CMakeFiles\offscreen.dir\offscreen.c.obj: C_COMPILER__offscreen_D
   TARGET_COMPILE_PDB = examples\CMakeFiles\offscreen.dir\
   TARGET_PDB = examples\offscreen.pdb
 
-build examples\CMakeFiles\offscreen.dir\glfw.rc.res: RC_COMPILER__offscreen_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_offscreen
+build examples\CMakeFiles\offscreen.dir\glfw.rc.res: RC_COMPILER__offscreen_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_offscreen
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\offscreen.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\offscreen.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\offscreen.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\offscreen.dir\
@@ -798,7 +798,7 @@ build examples\offscreen.exe: C_EXECUTABLE_LINKER__offscreen_Debug examples\CMak
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\offscreen.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/offscreen.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\offscreen.dir\
   TARGET_FILE = examples\offscreen.exe
@@ -823,11 +823,11 @@ build examples\CMakeFiles\sharing.dir\sharing.c.obj: C_COMPILER__sharing_Debug .
   TARGET_COMPILE_PDB = examples\CMakeFiles\sharing.dir\
   TARGET_PDB = examples\sharing.pdb
 
-build examples\CMakeFiles\sharing.dir\glfw.rc.res: RC_COMPILER__sharing_Debug C$:\mallib\mallib\fps\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_sharing
+build examples\CMakeFiles\sharing.dir\glfw.rc.res: RC_COMPILER__sharing_Debug C$:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\examples\glfw.rc || cmake_object_order_depends_target_sharing
   DEFINES = -D_CRT_SECURE_NO_WARNINGS
   DEP_FILE = examples\CMakeFiles\sharing.dir\glfw.rc.res.d
   FLAGS = -DWIN32 -D_DEBUG
-  INCLUDES = -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\deps -I C:\mallib\mallib\fps\subprojects\glfw-3.3.2\include
+  INCLUDES = -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\deps -I C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\include
   OBJECT_DIR = examples\CMakeFiles\sharing.dir
   OBJECT_FILE_DIR = examples\CMakeFiles\sharing.dir
   TARGET_COMPILE_PDB = examples\CMakeFiles\sharing.dir\
@@ -855,7 +855,7 @@ build examples\sharing.exe: C_EXECUTABLE_LINKER__sharing_Debug examples\CMakeFil
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = examples\CMakeFiles\sharing.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples/sharing.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = examples\CMakeFiles\sharing.dir\
   TARGET_FILE = examples\sharing.exe
@@ -867,7 +867,7 @@ build examples\sharing.exe: C_EXECUTABLE_LINKER__sharing_Debug examples\CMakeFil
 # Utility command for edit_cache
 
 build examples\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -878,7 +878,7 @@ build examples\edit_cache: phony examples\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build examples\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\mallib\mallib\fps\subprojects\glfw-3.3.2 -B"C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2 -B"C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -890,7 +890,7 @@ build examples\rebuild_cache: phony examples\CMakeFiles\rebuild_cache.util
 # Utility command for install
 
 build examples\CMakeFiles\install.util: CUSTOM_COMMAND examples\all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -902,7 +902,7 @@ build examples\install: phony examples\CMakeFiles\install.util
 # Utility command for install/local
 
 build examples\CMakeFiles\install\local.util: CUSTOM_COMMAND examples\all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\examples" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -911,7 +911,7 @@ build examples\install\local: phony examples\CMakeFiles\install\local.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/mallib/mallib/fps/subprojects/glfw-3.3.2/CMakeLists.txt
+# C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -963,7 +963,7 @@ build tests\clipboard.exe: C_EXECUTABLE_LINKER__clipboard_Debug tests\CMakeFiles
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\clipboard.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/clipboard.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\clipboard.dir\
   TARGET_FILE = tests\clipboard.exe
@@ -1019,7 +1019,7 @@ build tests\events.exe: C_EXECUTABLE_LINKER__events_Debug tests\CMakeFiles\event
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\events.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/events.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\events.dir\
   TARGET_FILE = tests\events.exe
@@ -1075,7 +1075,7 @@ build tests\msaa.exe: C_EXECUTABLE_LINKER__msaa_Debug tests\CMakeFiles\msaa.dir\
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\msaa.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/msaa.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\msaa.dir\
   TARGET_FILE = tests\msaa.exe
@@ -1087,7 +1087,7 @@ build tests\msaa.exe: C_EXECUTABLE_LINKER__msaa_Debug tests\CMakeFiles\msaa.dir\
 # Utility command for rebuild_cache
 
 build tests\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\mallib\mallib\fps\subprojects\glfw-3.3.2 -B"C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2 -B"C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1152,7 +1152,7 @@ build tests\glfwinfo.exe: C_EXECUTABLE_LINKER__glfwinfo_Debug tests\CMakeFiles\g
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\glfwinfo.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/glfwinfo.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\glfwinfo.dir\
   TARGET_FILE = tests\glfwinfo.exe
@@ -1208,7 +1208,7 @@ build tests\iconify.exe: C_EXECUTABLE_LINKER__iconify_Debug tests\CMakeFiles\ico
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\iconify.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/iconify.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\iconify.dir\
   TARGET_FILE = tests\iconify.exe
@@ -1264,7 +1264,7 @@ build tests\empty.exe: C_EXECUTABLE_LINKER__empty_Debug tests\CMakeFiles\empty.d
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\empty.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/empty.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\empty.dir\
   TARGET_FILE = tests\empty.exe
@@ -1320,7 +1320,7 @@ build tests\monitors.exe: C_EXECUTABLE_LINKER__monitors_Debug tests\CMakeFiles\m
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\monitors.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/monitors.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\monitors.dir\
   TARGET_FILE = tests\monitors.exe
@@ -1367,7 +1367,7 @@ build tests\reopen.exe: C_EXECUTABLE_LINKER__reopen_Debug tests\CMakeFiles\reope
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\reopen.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/reopen.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\reopen.dir\
   TARGET_FILE = tests\reopen.exe
@@ -1414,7 +1414,7 @@ build tests\cursor.exe: C_EXECUTABLE_LINKER__cursor_Debug tests\CMakeFiles\curso
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\cursor.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/cursor.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\cursor.dir\
   TARGET_FILE = tests\cursor.exe
@@ -1461,7 +1461,7 @@ build tests\gamma.exe: C_EXECUTABLE_LINKER__gamma_Debug tests\CMakeFiles\gamma.d
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\gamma.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/gamma.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\gamma.dir\
   TARGET_FILE = tests\gamma.exe
@@ -1508,7 +1508,7 @@ build tests\icon.exe: C_EXECUTABLE_LINKER__icon_Debug tests\CMakeFiles\icon.dir\
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\icon.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/icon.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\icon.dir\
   TARGET_FILE = tests\icon.exe
@@ -1564,7 +1564,7 @@ build tests\inputlag.exe: C_EXECUTABLE_LINKER__inputlag_Debug tests\CMakeFiles\i
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\inputlag.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/inputlag.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\inputlag.dir\
   TARGET_FILE = tests\inputlag.exe
@@ -1611,7 +1611,7 @@ build tests\joysticks.exe: C_EXECUTABLE_LINKER__joysticks_Debug tests\CMakeFiles
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\joysticks.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/joysticks.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\joysticks.dir\
   TARGET_FILE = tests\joysticks.exe
@@ -1667,7 +1667,7 @@ build tests\threads.exe: C_EXECUTABLE_LINKER__threads_Debug tests\CMakeFiles\thr
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\threads.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/threads.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\threads.dir\
   TARGET_FILE = tests\threads.exe
@@ -1714,7 +1714,7 @@ build tests\opacity.exe: C_EXECUTABLE_LINKER__opacity_Debug tests\CMakeFiles\opa
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\opacity.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/opacity.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\opacity.dir\
   TARGET_FILE = tests\opacity.exe
@@ -1761,7 +1761,7 @@ build tests\triangle-vulkan.exe: C_EXECUTABLE_LINKER__triangle-vulkan_Debug test
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\triangle-vulkan.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/triangle-vulkan.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\triangle-vulkan.dir\
   TARGET_FILE = tests\triangle-vulkan.exe
@@ -1808,7 +1808,7 @@ build tests\tearing.exe: C_EXECUTABLE_LINKER__tearing_Debug tests\CMakeFiles\tea
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\tearing.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/tearing.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\tearing.dir\
   TARGET_FILE = tests\tearing.exe
@@ -1820,7 +1820,7 @@ build tests\tearing.exe: C_EXECUTABLE_LINKER__tearing_Debug tests\CMakeFiles\tea
 # Utility command for edit_cache
 
 build tests\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1866,7 +1866,7 @@ build tests\timeout.exe: C_EXECUTABLE_LINKER__timeout_Debug tests\CMakeFiles\tim
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\timeout.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/timeout.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\timeout.dir\
   TARGET_FILE = tests\timeout.exe
@@ -1913,7 +1913,7 @@ build tests\title.exe: C_EXECUTABLE_LINKER__title_Debug tests\CMakeFiles\title.d
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\title.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/title.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\title.dir\
   TARGET_FILE = tests\title.exe
@@ -1969,7 +1969,7 @@ build tests\windows.exe: C_EXECUTABLE_LINKER__windows_Debug tests\CMakeFiles\win
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows /ENTRY:mainCRTStartup
   LINK_LIBRARIES = src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = tests\CMakeFiles\windows.dir
-  POST_BUILD = cd .
+  POST_BUILD = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/mallib/vcpkg-master/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests/windows.exe" -installedDir C:/mallib/vcpkg-master/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = tests\CMakeFiles\windows.dir\
   TARGET_FILE = tests\windows.exe
@@ -1987,7 +1987,7 @@ build tests\list_install_components: phony
 # Utility command for install
 
 build tests\CMakeFiles\install.util: CUSTOM_COMMAND tests\all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1999,7 +1999,7 @@ build tests\install: phony tests\CMakeFiles\install.util
 # Utility command for install/local
 
 build tests\CMakeFiles\install\local.util: CUSTOM_COMMAND tests\all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\tests" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -2008,7 +2008,7 @@ build tests\install\local: phony tests\CMakeFiles\install\local.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/mallib/mallib/fps/subprojects/glfw-3.3.2/CMakeLists.txt
+# C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/CMakeLists.txt
 # =============================================================================
 
 
@@ -2022,7 +2022,7 @@ build docs\docs: phony docs\CMakeFiles\docs
 # Utility command for install/local
 
 build docs\CMakeFiles\install\local.util: CUSTOM_COMMAND docs\all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -2034,7 +2034,7 @@ build docs\install\local: phony docs\CMakeFiles\install\local.util
 # Utility command for install
 
 build docs\CMakeFiles\install.util: CUSTOM_COMMAND docs\all
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -2046,7 +2046,7 @@ build docs\install: phony docs\CMakeFiles\install.util
 # Utility command for edit_cache
 
 build docs\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -2057,7 +2057,7 @@ build docs\edit_cache: phony docs\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build docs\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\mallib\mallib\fps\subprojects\glfw-3.3.2 -B"C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2 -B"C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -2075,7 +2075,7 @@ build docs\list_install_components: phony
 # Custom command for docs\CMakeFiles\docs
 
 build docs\CMakeFiles\docs: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files\doxygen\bin\doxygen.exe""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)\docs" && "C:\Program Files\doxygen\bin\doxygen.exe""
   DESC = Generating HTML documentation
 
 # =============================================================================
@@ -2209,35 +2209,35 @@ build windows.exe: phony tests\windows.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)
+# Folder: C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)
 
 build all: phony src\all examples\all tests\all docs\all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/docs
+# Folder: C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/docs
 
 build docs\all: phony docs\docs
 
 # =============================================================================
 
 #############################################
-# Folder: C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples
+# Folder: C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/examples
 
 build examples\all: phony examples\boing.exe examples\simple.exe examples\gears.exe examples\wave.exe examples\particles.exe examples\heightmap.exe examples\splitview.exe examples\offscreen.exe examples\sharing.exe
 
 # =============================================================================
 
 #############################################
-# Folder: C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/src
+# Folder: C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/src
 
 build src\all: phony src\glfw3.lib
 
 # =============================================================================
 
 #############################################
-# Folder: C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests
+# Folder: C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/tests
 
 build tests\all: phony tests\clipboard.exe tests\events.exe tests\msaa.exe tests\glfwinfo.exe tests\iconify.exe tests\empty.exe tests\monitors.exe tests\reopen.exe tests\cursor.exe tests\gamma.exe tests\icon.exe tests\inputlag.exe tests\joysticks.exe tests\threads.exe tests\opacity.exe tests\triangle-vulkan.exe tests\tearing.exe tests\timeout.exe tests\title.exe tests\windows.exe
 
@@ -2253,14 +2253,14 @@ build tests\all: phony tests\clipboard.exe tests\events.exe tests\msaa.exe tests
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\cmake_uninstall.cmake.in ..\..\..\docs\CMakeLists.txt ..\..\..\docs\Doxyfile.in ..\..\..\examples\CMakeLists.txt ..\..\..\src\CMakeLists.txt ..\..\..\src\glfw3.pc.in ..\..\..\src\glfw3Config.cmake.in ..\..\..\src\glfw_config.h.in ..\..\..\tests\CMakeLists.txt C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompiler.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCompilerIdDetection.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompileFeatures.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerABI.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerId.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineRCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeFindBinUtils.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitIncludeInfo.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCCompiler.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystem.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCompilerCommon.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestRCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.c.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ADSP-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMCC-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMClang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\AppleClang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Borland-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Bruce-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompilerInternal.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Cray-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Embarcadero-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Fujitsu-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GHS-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IAR-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Intel-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\NVIDIA-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PGI-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PathScale-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SCO-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SDCC-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TI-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Watcom-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindDoxygen.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Internal\FeatureTesting.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\cmake_uninstall.cmake.in ..\..\..\docs\CMakeLists.txt ..\..\..\docs\Doxyfile.in ..\..\..\examples\CMakeLists.txt ..\..\..\src\CMakeLists.txt ..\..\..\src\glfw3.pc.in ..\..\..\src\glfw3Config.cmake.in ..\..\..\src\glfw_config.h.in ..\..\..\tests\CMakeLists.txt C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompiler.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCompilerIdDetection.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompileFeatures.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerABI.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerId.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineRCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeFindBinUtils.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitIncludeInfo.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCCompiler.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystem.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCompilerCommon.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestRCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.c.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ADSP-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMCC-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMClang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\AppleClang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Borland-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Bruce-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompilerInternal.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Cray-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Embarcadero-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Fujitsu-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GHS-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IAR-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Intel-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\NVIDIA-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PGI-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PathScale-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SCO-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SDCC-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TI-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Watcom-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindDoxygen.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Internal\FeatureTesting.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake C$:\mallib\vcpkg-master\vcpkg\scripts\buildsystems\vcpkg.cmake CMakeCache.txt CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\..\..\CMakeLists.txt ..\..\..\cmake_uninstall.cmake.in ..\..\..\docs\CMakeLists.txt ..\..\..\docs\Doxyfile.in ..\..\..\examples\CMakeLists.txt ..\..\..\src\CMakeLists.txt ..\..\..\src\glfw3.pc.in ..\..\..\src\glfw3Config.cmake.in ..\..\..\src\glfw_config.h.in ..\..\..\tests\CMakeLists.txt C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompiler.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCompilerIdDetection.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompileFeatures.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerABI.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerId.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineRCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeFindBinUtils.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitIncludeInfo.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCCompiler.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystem.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCompilerCommon.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestRCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.c.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ADSP-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMCC-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMClang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\AppleClang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Borland-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Bruce-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompilerInternal.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Cray-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Embarcadero-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Fujitsu-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GHS-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IAR-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Intel-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\NVIDIA-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PGI-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PathScale-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SCO-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SDCC-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TI-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Watcom-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindDoxygen.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Internal\FeatureTesting.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake: phony
+build ..\..\..\CMakeLists.txt ..\..\..\cmake_uninstall.cmake.in ..\..\..\docs\CMakeLists.txt ..\..\..\docs\Doxyfile.in ..\..\..\examples\CMakeLists.txt ..\..\..\src\CMakeLists.txt ..\..\..\src\glfw3.pc.in ..\..\..\src\glfw3Config.cmake.in ..\..\..\src\glfw_config.h.in ..\..\..\tests\CMakeLists.txt C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompiler.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCompilerIdDetection.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDependentOption.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompileFeatures.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerABI.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerId.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineRCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeFindBinUtils.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitIncludeInfo.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCCompiler.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystem.cmake.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCompilerCommon.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestRCCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.c.in C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckIncludeFile.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CheckLibraryExists.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ADSP-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMCC-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMClang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\AppleClang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Borland-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Bruce-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompilerInternal.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Cray-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Embarcadero-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Fujitsu-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GHS-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IAR-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Intel-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\NVIDIA-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PGI-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PathScale-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SCO-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SDCC-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TI-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Watcom-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-C-DetermineCompiler.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindDoxygen.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindPackageMessage.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\FindThreads.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\GNUInstallDirs.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Internal\FeatureTesting.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\WriteBasicConfigVersionFile.cmake C$:\mallib\vcpkg-master\vcpkg\scripts\buildsystems\vcpkg.cmake CMakeCache.txt CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake: phony
 
 
 #############################################

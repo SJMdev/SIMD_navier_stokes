@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/install_manifest.txt\"")
+if (NOT EXISTS "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/install_manifest.txt\"")
 endif()
 
-file(READ "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/install_manifest.txt" files)
+file(READ "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

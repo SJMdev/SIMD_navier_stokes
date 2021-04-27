@@ -2,6 +2,7 @@ project('testt', 'cpp',default_options : ['cpp_std=c++latest', 'warning_level=3'
 
 # only for clang
 #add_project_arguments('-ftime-trace', language:'cpp')
+add_project_arguments('/arch:AVX512', language : 'cpp')
 
 inc_dir = include_directories('include')
 

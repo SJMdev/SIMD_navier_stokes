@@ -659,7 +659,7 @@ rule C_EXECUTABLE_LINKER__windows_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\mallib\mallib\fps\subprojects\glfw-3.3.2 -B"C:\mallib\mallib\fps\subprojects\glfw-3.3.2\out\build\x64-Debug (default)"
+  command = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2 -B"C:\Users\Thesis\Desktop\smoke\subprojects\glfw-3.3.2\out\build\x64-Debug (default)"
   description = Re-running CMake...
   generator = 1
 

@@ -52,7 +52,7 @@ PROJECT_LOGO           =
 # If a relative path is entered, it will be relative to the location
 # where doxygen was started. If left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/docs"
+OUTPUT_DIRECTORY       = "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/docs"
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create
 # 4096 sub-directories (in 2 levels) under the output directory of each output
@@ -590,7 +590,7 @@ FILE_VERSION_FILTER    =
 # You can optionally specify a file name after the option, if omitted
 # DoxygenLayout.xml will be used as the name of the layout file.
 
-LAYOUT_FILE            = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/DoxygenLayout.xml"
+LAYOUT_FILE            = "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/DoxygenLayout.xml"
 
 # The CITE_BIB_FILES tag can be used to specify one or more bib files
 # containing the references data. This must be a list of .bib files. The
@@ -652,7 +652,7 @@ WARN_FORMAT            = "$file:$line: $text"
 # and error messages should be written. If left blank the output is written
 # to stderr.
 
-WARN_LOGFILE           = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/docs/warnings.txt"
+WARN_LOGFILE           = "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/out/build/x64-Debug (default)/docs/warnings.txt"
 
 #---------------------------------------------------------------------------
 # configuration options related to the input files
@@ -664,22 +664,22 @@ WARN_LOGFILE           = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/out/build/
 # with spaces.
 
 INPUT                  =  \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/include/GLFW/glfw3.h" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/include/GLFW/glfw3native.h" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/main.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/news.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/quick.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/moving.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/compile.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/build.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/intro.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/context.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/monitor.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/window.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/input.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/vulkan.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/compat.dox" \
-"C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/internal.dox"
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/include/GLFW/glfw3.h" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/include/GLFW/glfw3native.h" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/main.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/news.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/quick.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/moving.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/compile.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/build.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/intro.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/context.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/monitor.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/window.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/input.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/vulkan.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/compat.dox" \
+"C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/internal.dox"
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is
@@ -739,7 +739,7 @@ EXCLUDE_SYMBOLS        = APIENTRY GLFWAPI
 # directories that contain example code fragments that are included (see
 # the \include command).
 
-EXAMPLE_PATH           = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/examples"
+EXAMPLE_PATH           = "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/examples"
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp
@@ -915,13 +915,13 @@ HTML_FILE_EXTENSION    = .html
 # have to redo this when upgrading to a newer version of doxygen or when
 # changing the value of configuration settings such as GENERATE_TREEVIEW!
 
-HTML_HEADER            = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/header.html"
+HTML_HEADER            = "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/header.html"
 
 # The HTML_FOOTER tag can be used to specify a personal HTML footer for
 # each generated HTML page. If it is left blank doxygen will generate a
 # standard footer.
 
-HTML_FOOTER            = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/footer.html"
+HTML_FOOTER            = "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/footer.html"
 
 # The HTML_STYLESHEET tag can be used to specify a user-defined cascading
 # style sheet that is used by each HTML page. It can be used to
@@ -940,7 +940,7 @@ HTML_STYLESHEET        =
 # robust against future updates. Doxygen will copy the style sheet file to
 # the output directory.
 
-HTML_EXTRA_STYLESHEET  = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/extra.css"
+HTML_EXTRA_STYLESHEET  = "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/extra.css"
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
@@ -949,7 +949,7 @@ HTML_EXTRA_STYLESHEET  = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/extra
 # files. In the HTML_STYLESHEET file, use the file name only. Also note that
 # the files will be copied as-is; there are no commands or markers available.
 
-HTML_EXTRA_FILES       = "C:/mallib/mallib/fps/subprojects/glfw-3.3.2/docs/spaces.svg"
+HTML_EXTRA_FILES       = "C:/Users/Thesis/Desktop/smoke/subprojects/glfw-3.3.2/docs/spaces.svg"
 
 # The HTML_COLORSTYLE_HUE tag controls the color of the HTML output.
 # Doxygen will adjust the colors in the style sheet and background images
