@@ -14,13 +14,13 @@
 #include <algorithm>
 #include <immintrin.h>
 #include <cmath> // isnan
-
+#include <chrono>
 
 using namespace std;
 
 
 //--- SIMULATION PARAMETERS ------------------------------------------------------------------------
-const int DIM = 52;				//size of simulation grid
+const int DIM = 400;				//size of simulation grid
 const double dt = 0.2;				//simulation time step
 float visc = 0.001f;				//fluid viscosity
 double *vx, *vy;             //(vx,vy)   = velocity field at the current moment
@@ -28,6 +28,9 @@ double *vx0, *vy0;           //(vx0,vy0) = velocity field at the previous moment
 double *fx, *fy;	            //(fx,fy)   = user-controlled simulation forces, steered with the mouse
 double *rho, *rho0;			//smoke density at the current (rho) and previous (rho0) moment
 // rfftwnd_plan plan_rc, plan_cr;  //simulation domain discretization
+// don't do this.
+double timer[256];
+int timer_current_idx = 0;
 
 fftw_plan plan_r2c_vx0;
 fftw_plan plan_c2r_vx0;   
@@ -45,13 +48,12 @@ int   draw_vecs = 0;            //draw the vector field or not
 const int COLOR_BLACKWHITE=0;   //different types of color mapping: black-and-white, rainbow, banded
 const int COLOR_RAINBOW=1;
 const int COLOR_BANDS=2;
-int   scalar_col = COLOR_BLACKWHITE;           //method for scalar coloring
+int   scalar_col = COLOR_RAINBOW;           //method for scalar coloring
 int   frozen = 0;               //toggles on/off the animation
 
 
 int clamp(float x)
 { return ( (x) >= 0.0? ((int)(x)) : (-((int)(1-(x) ) ) ) ); }
-
 
 
 inline __m128i SIMD_clamp(__m256d lhs)
@@ -65,10 +67,12 @@ inline __m128i SIMD_clamp(__m256d lhs)
 	float vec_ones_f[4] = {0.0f,0.0f,0.0f,0.0f};
 	float vec_neg_ones_f[4] = {-1.0f,-1.0f,-1.0f,-1.0f};
 
-	__m128 negative_mask = _mm_cmplt_ps(lhs_float, *(__m128*)vec_zeroes_f);	
+	// the mask will contain NAN for the negative value.
+	// we can use bitwise AND to see which values are negative and use that to 
+	// generate the correct amount of neg-ones.
+	__m128 negative_mask = _mm_cmplt_ps(lhs_float, *(__m128*)vec_zeroes_f);
  	__m128 negative_ones = _mm_and_ps(*(__m128*)vec_neg_ones_f, negative_mask);
 
-	// the mask will contain -1 for the negative value.
 	// -1 * (1 - x) = -1 + x
 	lhs_float = _mm_add_ps(lhs_float, negative_ones);
 
@@ -126,7 +130,7 @@ void init_simulation(int n)
 
 
 	plan_r2c_vx0 = fftw_plan_dft_r2c_2d(DIM, DIM, vx0, static_cast<fftw_complex *>(static_cast<void *>(vx0)), FFTW_DESTROY_INPUT);
-    plan_c2r_vx0 = fftw_plan_dft_c2r_2d(DIM, DIM, static_cast<fftw_complex *>(static_cast<void *>(vx0)), vx0, FFTW_DESTROY_INPUT);
+   plan_c2r_vx0 = fftw_plan_dft_c2r_2d(DIM, DIM, static_cast<fftw_complex *>(static_cast<void *>(vx0)), vx0, FFTW_DESTROY_INPUT);
 
     plan_r2c_vy0 = fftw_plan_dft_r2c_2d(DIM, DIM, vy0, static_cast<fftw_complex *>(static_cast<void *>(vy0)), FFTW_DESTROY_INPUT);
     plan_c2r_vy0 = fftw_plan_dft_c2r_2d(DIM, DIM, static_cast<fftw_complex *>(static_cast<void *>(vy0)), vy0, FFTW_DESTROY_INPUT);
@@ -142,6 +146,8 @@ float max(float x, float y)
 //solve: Solve (compute) one step of the fluid flow simulation
 void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc, double dt)
 {
+	auto start = std::chrono::system_clock::now();
+
 	double  x0, y0, f, r, U[2], V[2], s, t;
 	int  i0, j0, i1, j1;
 
@@ -177,7 +183,10 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 
 	double vec_x[4] = {start_value, start_value, start_value, start_value};	
 	const double vec_x_increment[4] = {increment, increment, increment, increment};
+
+	// since Y is operated on with strides of 4, we need to offset all values based on their "index".
 	double vec_y[4] = {start_value, start_value + increment, start_value + 2 * increment, start_value + 3.0 * increment};
+	// since y is operated on with strides of 4, we need to increment 4 times as much at every iteration.
 	const double vec_y_increment[4] = {4.0 * increment, 4.0 * increment, 4.0 * increment, 4.0 * increment};
 
 	const double vec_neg_dt[4] = {-dt, -dt, -dt, -dt};
@@ -606,6 +615,24 @@ void solve(int n, double* vx, double* vy, double* vx0, double* vy0, double visc,
 			vx[row_idx + n * col_idx] = f*vx0[row_idx + ( n + 2) * col_idx]; vy[row_idx + n * col_idx] = f*vy0[row_idx + ( n +2)*col_idx]; 	
 		} 		
  	}
+
+
+	auto end = std::chrono::system_clock::now();
+
+ 	std::chrono::duration<double> diff = end - start;
+ 	timer[timer_current_idx] = diff.count(); 
+ 	timer_current_idx += 1;
+ 	timer_current_idx = timer_current_idx % 256;
+ 	if (timer_current_idx == 0)
+	{
+		double acc = 0.0;
+		for (auto value: timer)
+			acc += value;
+		acc /= 256.0;
+
+		std::cerr << "solve avg duration in s, ms: " << acc << " " << acc * 1000 <<  '\n';
+ 	}
+
 }
 
 
@@ -637,8 +664,7 @@ void diffuse_matter(int n, double *vx, double *vy, double *rho, double *rho0, do
 //            Also dampen forces and matter density to get a stable simulation.
 void set_forces(void)
 {
-	int i;
-	for (i = 0; i < DIM * DIM; i++)
+	for (int i = 0; i < DIM * DIM; i++)
 	{
         rho0[i]  = 0.995 * rho[i];
         fx[i] *= 0.85;
